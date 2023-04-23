@@ -6,5 +6,6 @@
 #include <stdlib.h>
 
 int _printf(const char *format, ...);
+int printf0(const char *format, va_list arg);
 
 #endif
