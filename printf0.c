@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print0 - handles c, s and % specifiers
+ * printf0 - handles c, s and % specifiers
  * @format: format string
- * @args: arguments list
+ * @arg: arguments list
  * Return: number of characters printed
  */
 
@@ -24,14 +24,14 @@ int printf0(const char *format, va_list arg)
 				c = va_arg(arg, int);
 				write(1, &c, 1);
 				numOfChar++;
-			}	
+			}
 			else if (format[i] == 's')
 			{
 				str = va_arg(arg, char *);
 				for (j = 0; str[j] != '\0'; j++)
 				{
 					write(1, &str[j], 1);
-				 	numOfChar++;
+					numOfChar++;
 				}
 			}
 			else if (format[i] == '%')
