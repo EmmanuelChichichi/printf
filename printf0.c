@@ -28,6 +28,8 @@ int printf0(const char *format, va_list arg)
 			else if (format[i] == 's')
 			{
 				str = va_arg(arg, char *);
+				if (!str)
+					str = " ";
 				for (j = 0; str[j] != '\0'; j++)
 				{
 					write(1, &str[j], 1);
